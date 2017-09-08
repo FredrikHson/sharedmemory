@@ -26,7 +26,7 @@ public:
             fprintf(stderr, "error opening shared memory\n");
         }
 
-        if(ftruncate(fd, sizeof(data) == -1))
+        if(ftruncate(fd, sizeof(data)) == -1)
         {
             fprintf(stderr, "error sizing shared memory\n");
         }
@@ -37,7 +37,7 @@ public:
         {
             fprintf(stderr, "error mapping shared memory\n");
         }
-        fprintf(stdout,"done mapping shared memory\n");
+        fprintf(stdout,"done mapping shared memory\nshould be:%i bytes big\n",sizeof(data));
     }
 
 };
