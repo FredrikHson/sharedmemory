@@ -14,7 +14,8 @@ int main(int argc, char* argv[])
         }
 
         basenumber = basenumber + 1;;
-        fprintf(stdout,"basenumber:%i numbers[0]:%i\n",basenumber, mem.d->numbers[0]);
+        //fprintf(stdout, "basenumber:%i numbers[0]:%i\n", basenumber, mem.d->numbers[0]);
+        //msync(mem.d, sizeof(data), MS_SYNC);
         sleep(1);
     }
 
